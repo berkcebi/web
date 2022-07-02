@@ -1,0 +1,16 @@
+body {
+    margin: 16px;
+    background-color: #f95738;
+    font-family: "Space Mono", monospace;
+    font-size: 11pt;
+    text-underline-offset: 2px;
+    color: #ffffff;
+}
+
+p {
+    margin: 16px auto;
+}
+
+a {
+    color: #fff7ad;
+}
