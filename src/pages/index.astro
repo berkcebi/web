@@ -19,7 +19,17 @@ import Layout from "../layouts/Layout.astro";
 
 <script>
     const EMOJIS = ["🐠", "🥭", "🏺", "🧤", "🥛", "🥥"];
+    const INTERVAL = 5000;
 
-    const element = document.getElementById("emoji") as HTMLSpanElement;
-    element.textContent = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
+    function setEmoji(index: number) {
+        const element = document.getElementById("emoji") as HTMLSpanElement;
+        element.textContent = EMOJIS[index];
+    }
+
+    let index = Math.floor(Math.random() * EMOJIS.length);
+    setEmoji(index);
+    window.setInterval(() => {
+        index = (index + 1) % EMOJIS.length;
+        setEmoji(index);
+    }, INTERVAL);
 </script>
