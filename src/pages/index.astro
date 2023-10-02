@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Berk Çebi">
+    <p>Hey, I'm Berk. <span id="emoji"></span></p>
+    <p>
+        I'm a software engineer and one of the co-founders of
+        <a href="https://zeplin.io">Zeplin</a> — you can reach me at
+        <a href="https://twitter.com/berkcebi">@berkcebi</a>.
+    </p>
+    <p>
+        I recently released one of my side projects,
+        <a href="https://peel.fm">Peel</a>. It's a little drum machine in your
+        browser.
+    </p>
+    <!-- Oh, hello. If you're into game development, you can also find some of my work at GitHub: https://github.com/berkcebi -->
+</Layout>
+
+<script>
+    const EMOJIS = ["🐠", "🥭", "🏺", "🧤", "🥛", "🥥"];
+
+    const element = document.getElementById("emoji") as HTMLSpanElement;
+    element.textContent = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
+</script>
