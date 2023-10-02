@@ -1,14 +1,19 @@
 {
     "name": "berk-web",
-    "version": "0.1.0",
+    "version": "0.2.0",
+    "type": "module",
     "main": "index.js",
     "scripts": {
-        "start": "eleventy --serve",
-        "build": "eleventy",
-        "format": "prettier --write ."
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview"
+    },
+    "dependencies": {
+        "astro": "^3.2.1"
     },
     "devDependencies": {
-        "@11ty/eleventy": "^1.0.1",
-        "prettier": "^2.7.1"
+        "prettier": "^3.0.3",
+        "prettier-plugin-astro": "^0.12.0"
     }
 }
